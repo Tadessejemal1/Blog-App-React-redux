@@ -31,14 +31,12 @@ export const addNewPost = createAsyncThunk('posts/addNewPost', async (initialPos
 
 export const updatePost = createAsyncThunk('posts/updatePost', async (initialPost) => {
     const { id } = initialPost;
-    // try-catch block only for development/testing with fake API
-    // otherwise, remove try-catch and add updatePost.rejected case
     try {
         const response = await axios.put(`${POSTS_URL}/${id}`, initialPost)
         return response.data
     } catch (err) {
         //return err.message;
-        return initialPost; // only for testing Redux!
+        return initialPost;
     }
 })
 
