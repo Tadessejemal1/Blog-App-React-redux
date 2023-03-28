@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <header className="Header">
-            <h1>Redux Blog</h1>
+            <h1>Blog App</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
