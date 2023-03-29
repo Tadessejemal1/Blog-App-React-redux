@@ -8,7 +8,7 @@ const PostsList = () => {
     const postStatus = useSelector(getPostsStatus);
     const error = useSelector(getPostsError);
 
-    let content;
+    let postContent;
     if (postStatus === 'loading') {
         content = <p>"Loading..."</p>;
     } else if (postStatus === 'succeeded') {
@@ -19,7 +19,7 @@ const PostsList = () => {
 
     return (
         <section>
-            {content}
+            {postContent}
         </section>
     )
 }
